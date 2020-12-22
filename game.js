@@ -9,6 +9,7 @@ var level = 0;
 $(document).on("keypress touchstart", function() {
   if (!started) {
     $("#level-title").text("Level " + level);
+     $("#mobile-title").text("Level " + level);
     nextSequence();
     started = true;
   }
@@ -30,6 +31,7 @@ function nextSequence() {
   userClickedPattern = [];
   level++;
   $("#level-title").text("Level " + level);
+   $("#mobile-title").text("Level " + level);
 
   var randomNumber = Math.floor(Math.random() * 4);
   var randomChosenColour = buttonColours[randomNumber];
@@ -61,6 +63,7 @@ function checkAnswer (currentLevel) {
     playSound("wrong");
       $("body").addClass("game-over");
       $("#level-title").text("Game over, press any key to restart.");
+     $("#mobile-title").text("Game over, press any key to restart.");
     setTimeout(function(){
     $("body").removeClass("game-over");
 
