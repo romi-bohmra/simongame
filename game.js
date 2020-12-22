@@ -63,7 +63,7 @@ function checkAnswer (currentLevel) {
     playSound("wrong");
       $("body").addClass("game-over");
       $("#level-title").text("Game over, press any key to restart.");
-     $("#mobile-title").text("Game over, press any key to restart.");
+     $("#mobile-title").text("Game over, touch the screen to restart.");
     setTimeout(function(){
     $("body").removeClass("game-over");
 
